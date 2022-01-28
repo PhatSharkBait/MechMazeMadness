@@ -19,7 +19,6 @@ public class MazeMaker : MonoBehaviour {
 	public int TotalCells { get; private set; }
 	public int CellCount { get; set; }
 	public RecursiveBacktrackingAlgorithm RecursiveBacktrackingMaze { get; private set; }
-	public HuntAndKillAlgorithm HuntAndKillMaze { get; private set; }
 	public string SelectedAlgorithm { get; set; }
 
 	// method used to create a grid of cells without any walls to be used with additive maze algorithms

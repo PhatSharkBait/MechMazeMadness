@@ -8,7 +8,12 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="TestScript.cs" t="Include" />
+          <e p="Cell.cs" t="Include" />
+          <e p="MazeAlgorithm.cs" t="Include" />
+          <e p="MazeMaker.cs" t="Include" />
+          <e p="MazeManager.cs" t="Include" />
+          <e p="RecursiveBacktrackingAlgorithm.cs" t="Include" />
+          <e p="Stack.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="Include">

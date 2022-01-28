@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf06b80f-c49e-467b-a8d2-661890c6e243" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MechMazeMadness/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MechMazeMadness/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MechMazeMadness/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MechMazeMadness/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MazeMaker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MazeMaker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MazeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MazeManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +19,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/TestScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MazeMaker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MazeManager.cs" />
       </list>
     </option>
   </component>
@@ -59,6 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1641771498450</updated>
       <workItem from="1641771514982" duration="115000" />
+      <workItem from="1643413129076" duration="1091000" />
     </task>
     <servers />
   </component>
