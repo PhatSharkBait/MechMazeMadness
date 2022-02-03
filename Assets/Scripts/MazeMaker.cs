@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +21,7 @@ public class MazeMaker : MonoBehaviour {
 	public int CellCount { get; set; }
 	public RecursiveBacktrackingAlgorithm RecursiveBacktrackingMaze { get; private set; }
 	public string SelectedAlgorithm { get; set; }
+	
 
 	// method used to create a grid of cells without any walls to be used with additive maze algorithms
 	public void GenerateCells( int rows, int columns, WaitForSeconds delay) 
