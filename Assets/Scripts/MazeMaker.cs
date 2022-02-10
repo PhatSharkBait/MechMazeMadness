@@ -65,7 +65,7 @@ public class MazeMaker : MonoBehaviour {
 	}
 
 	// method used to create a grid of cells with four walls to be used with destructive maze algorithms
-	public void BuildTheEggCarton(int rows, int columns, WaitForSeconds delay)
+	public void BuildTheEggCarton(int rows, int columns, WaitForSeconds delay, Vector3SO SpawnPoint)
 	{
 		WaitForSeconds waitForSeconds = delay;
 
@@ -90,6 +90,16 @@ public class MazeMaker : MonoBehaviour {
 				CurrentPosition = new Vector3(InitialPosition.x + z * WallLength - WallLength / 2, 0.0f,InitialPosition.z + x * WallLength - WallLength / 2);
 				Cell currentCell = new Cell(x, z, CellCount++);
 				currentCell.Floor = Instantiate(floorPrefab, CurrentPosition, Quaternion.identity) as GameObject;
+				
+				if (x == 0 && z == 0) {
+					currentCell.Floor.GetComponent<MeshRenderer>().material.color = Color.blue;
+					//spawn offset
+					SpawnPoint.SetVectorValue(CurrentPosition);
+				}
+
+				if (x == Rows - 1 && z == Rows - 1) {
+					currentCell.Floor.GetComponent<MeshRenderer>().material.color = Color.red;
+				}
 
 				// all cells get their own north and an east wall instantiated
 				CurrentPosition = new Vector3(InitialPosition.x + (z * WallLength) - WallLength / 2, 0.0f, InitialPosition.z + (x * WallLength));

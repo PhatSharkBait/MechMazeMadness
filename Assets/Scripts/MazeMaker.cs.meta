@@ -3,7 +3,10 @@ guid: b48b1f34efee8304a87bd1284da5e98c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - floorPrefab: {instanceID: 0}
+  - wallPrefab: {instanceID: 0}
+  - SpawnPoint: {fileID: 11400000, guid: 8c5b947e6a8b33a49995b45d3e3780a0, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
