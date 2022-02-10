@@ -1,21 +1,37 @@
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
-    private Rigidbody _rigidbody;
-    private float moveSpeed = 5f;
+    public CharacterController controller;
+    public float speed = 12f;
+    public float gravity = -9.81f;
+    public float jumpHeight = 3f;
 
-    private void Start() {
-        _rigidbody = GetComponent<Rigidbody>();
-    }
+    public Transform groundCheck;
+    public float groundDistance;
+    public LayerMask groundMask;
 
-
-    private void FixedUpdate() {
-        float xVal = Input.GetAxis("Horizontal");
-        float zVal = Input.GetAxis("Vertical");
-        float yVal = Input.GetAxis("Jump");
+    public Vector3 velocity;
+    public bool isGrounded;
+    private void Update() {
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        if(isGrounded && velocity.y < 0) {
+            velocity.y = -2f;
+        }
         
-        var moveDir = new Vector3(xVal, yVal, zVal).normalized * (Time.deltaTime * moveSpeed) + gameObject.transform.position;
-        //transform.Translate(moveDir);
-        _rigidbody.MovePosition(moveDir);
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+
+        var playerTransform = transform;
+        Vector3 move = (playerTransform.right * x) + (playerTransform.forward * z);
+
+        controller.Move(move * speed * Time.deltaTime);
+
+        if (Input.GetButtonDown("Jump") && isGrounded) {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+
+        velocity.y += gravity * Time.deltaTime;
+
+        controller.Move(velocity * Time.deltaTime);
     }
 }
