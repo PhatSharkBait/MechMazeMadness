@@ -262,8 +262,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   mazeMaker: {fileID: 114707504098069610, guid: 6510afbd547dd724e835e5e297066424, type: 3}
-  Columns: 10
-  Rows: 10
+  Columns: 25
+  Rows: 25
   spawnPoint: {fileID: 11400000, guid: 8c5b947e6a8b33a49995b45d3e3780a0, type: 2}
 --- !u!4 &1945858838
 Transform:
