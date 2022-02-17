@@ -93,8 +93,8 @@ public class MazeMaker : MonoBehaviour {
 				
 				if (x == 0 && z == 0) {
 					currentCell.Floor.GetComponent<MeshRenderer>().material.color = Color.blue;
-					//spawn offset
-					SpawnPoint.SetVectorValue(CurrentPosition);
+					var playerOffset = Vector3.up * 3f;//spawn offset
+					SpawnPoint.SetVectorValue(CurrentPosition + playerOffset);
 				}
 
 				if (x == Rows - 1 && z == Rows - 1) {
