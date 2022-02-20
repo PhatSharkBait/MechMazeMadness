@@ -16,7 +16,10 @@ public class Timer: MonoBehaviour
 
 
   void Start(){
-    currentTime = 0;    
+    currentTime = 0; 
+    currMin = "00";
+    currSec = "00";
+    currMill = "00";   
   }
 
   void isFinished() {
@@ -26,12 +29,10 @@ public class Timer: MonoBehaviour
   }
 
   void isStarted(){
-      if(transform.position.x > -22 | transform.position.z > -22){
+      if(transform.position.x > -23 | transform.position.z > -23){
           started = true;
       }
-      currMin = "00";
-      currSec = "00";
-      currMill = "00";
+     
   }
 
 
@@ -62,16 +63,16 @@ public class Timer: MonoBehaviour
             currMill = time.Milliseconds.ToString();
         }
         
-        currentTimeText = currMin + ":" + currSec + ":" + currMill  + " X: " + Mathf.Round((transform.position.x)) + " Y: " + Mathf.Round((transform.position.z));
+        currentTimeText = currMin + ":" + currSec + ":" + currMill;
       }
       else {
-          currentTimeText = currMin + ":" + currSec + ":" + currMill  + " X: " + Mathf.Round((transform.position.x)) + " Y: " + Mathf.Round((transform.position.z));
+          currentTimeText = currMin + ":" + currSec + ":" + currMill;
       }
     
   }
 
 
   void OnGUI(){
-    GUI.Label(new Rect(Screen.width - 180, Screen.height-20, 200, 80), currentTimeText);
+    GUI.Label(new Rect(Screen.width - 60, Screen.height-20, 200, 80), currentTimeText);
   }
 }
