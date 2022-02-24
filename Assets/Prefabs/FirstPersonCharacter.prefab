@@ -198,12 +198,12 @@ MonoBehaviour:
   controller: {fileID: 9088351511608995336}
   speed: 3
   gravity: -9.81
-  jumpHeight: 3
+  jumpHeight: 0.4
   groundCheck: {fileID: 9088351510964921774}
   groundDistance: 0.5
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   velocity: {x: 0, y: 0, z: 0}
   isGrounded: 0
 --- !u!114 &8076038234809279834
@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5768dfb34512bb143a9b553bd63d4832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentTimeText: 
 --- !u!1 &9088351511764492085
 GameObject:
   m_ObjectHideFlags: 0

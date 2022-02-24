@@ -72,7 +72,7 @@ public class Timer: MonoBehaviour
   }
 
 
-  void OnGUI(){
-    GUI.Label(new Rect(Screen.width - 60, Screen.height-20, 200, 80), currentTimeText);
+  void OnGUI() {
+      GUI.Label(new Rect(Screen.width - 60, Screen.height - 20, 200, 80), currentTimeText);
   }
 }

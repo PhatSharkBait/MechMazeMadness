@@ -52,6 +52,13 @@ public class RecursiveBacktrackingAlgorithm : MazeAlgorithm {
 				CookieTrail.RemoveAt(CookieTrail.Count - 1);
 			}
 		}
+
+		for (int i = 0; i < Stack.TotalCells; i++) {
+			var thisCell = Stack.GetCell(i);
+			if (thisCell != null) {
+				Debug.Log(thisCell.Column + " " + thisCell.Row + " " + thisCell.Index);
+			}
+		}
 	}
 
 	public void DestroyAdjoiningWall(Cell currentCell, Cell adjoiningCell)
