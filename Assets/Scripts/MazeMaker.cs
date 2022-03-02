@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class MazeMaker : MonoBehaviour {
 
+	public StackSO currentMaze;
+
 	public GameObject floorPrefab;
 	public GameObject wallPrefab;
 
@@ -161,7 +163,12 @@ public class MazeMaker : MonoBehaviour {
 		RecursiveBacktrackingMaze = new RecursiveBacktrackingAlgorithm(Cells);   // add code to deal with selecting the appropriate algorithm for when multiple
 		//HuntAndKillMaze = new HuntAndKillAlgorithm(Cells); -- address issues in class
 
-		RecursiveBacktrackingMaze.CreateMaze();                                  // maze classes are available
+		RecursiveBacktrackingMaze.CreateMaze(); // maze classes are available
+		SetStackData();
+	}
+	
+	private void SetStackData() {
+		currentMaze.SetData(RecursiveBacktrackingMaze.Stack);
 	}
 
 }

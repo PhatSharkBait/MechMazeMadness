@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Stack {
+public class Stack{
 
 	public Cell[,] Cells { get; set; }
 	public int Rows { get; set; }

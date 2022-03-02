@@ -43,5 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48b1f34efee8304a87bd1284da5e98c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentMaze: {fileID: 11400000, guid: 010bf482882a4d049b3f0634a6a8e57d, type: 2}
   floorPrefab: {fileID: 1191180631439256, guid: 8be56e7fd3617c848b5010406c10fc0f, type: 3}
   wallPrefab: {fileID: 1800468132784748, guid: d27e659acfbec8c4485ec0e6060c4312, type: 3}

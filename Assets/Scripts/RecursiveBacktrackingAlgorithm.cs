@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEngine;
 
 public class RecursiveBacktrackingAlgorithm : MazeAlgorithm {
-
+	
 	public List<Cell> CookieTrail { get; set; }
 
 	public RecursiveBacktrackingAlgorithm(Cell[,] cells) : base(cells)
@@ -53,12 +53,12 @@ public class RecursiveBacktrackingAlgorithm : MazeAlgorithm {
 			}
 		}
 
-		for (int i = 0; i < Stack.TotalCells; i++) {
+		/*for (int i = 0; i < Stack.TotalCells; i++) {
 			var thisCell = Stack.GetCell(i);
 			if (thisCell != null) {
 				Debug.Log(thisCell.Column + " " + thisCell.Row + " " + thisCell.Index);
 			}
-		}
+		} */
 	}
 
 	public void DestroyAdjoiningWall(Cell currentCell, Cell adjoiningCell)
